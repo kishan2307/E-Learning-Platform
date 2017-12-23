@@ -1,0 +1,88 @@
+.btn-info {
+    background-color:white;
+    color: #5DADE2;
+    border: solid 2px #5DADE2;
+}
+.btn-success {
+    background-color:white;
+    color: #27AE60;
+    border: solid 2px #27AE60;
+}
+.btn-danger {
+    background-color:white;
+    color: #EC7063;
+    border: solid 2px #EC7063  ;
+}
+
+.btn-primary{
+    background-color:white;
+    color: #2471A3  ;
+    border: solid 2px #2471A3   ;
+}
+
+.header > .title {
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+}
+.empty-space {
+    height: 55px;
+}
+#questions > .list-group > #list-heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px;
+    border: 1px solid #ddd;
+}
+#questions > .list-group > .list-group-item:hover {
+    background-color: #337ab7;
+    color: white;
+}
+#header {
+    margin-bottom: 20px;
+}
+.types {
+    text-transform: uppercase;
+    padding: 6px;
+    font-weight: 600
+}
+#wrapAnswer {
+    margin-bottom: 40px;
+    background-color: white;
+}
+#wrapAnswer > #answerLabel {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    color: black;
+    padding: 10px;
+}
+
+#rLabel,
+#addResponse,
+#addResponseMatching {
+    margin: 15px;
+}
+#field {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+.panel-heading {
+rgba(183,222,237,1)), color-stop(21%, rgba(113,206,239,1)), color-stop(61%, rgba(33,180,226,1)), color-stop(100%, rgba(183,222,237,1)));
+    background: -webkit-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 21%, rgba(33,180,226,1) 61%, rgba(183,222,237,1) 100%);
+    background: -o-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 21%, rgba(33,180,226,1) 61%, rgba(183,222,237,1) 100%);
+    background: -ms-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 21%, rgba(33,180,226,1) 61%, rgba(183,222,237,1) 100%);
+    background: linear-gradient(to right, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 21%, rgba(33,180,226,1) 61%, rgba(183,222,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=1 );
+}
+
+body {
+    counter-reset: section;
+}
+
+#questionprompt::before {
+    counter-increment: section;
+    content: "Question " counter(section) ": ";
+}
