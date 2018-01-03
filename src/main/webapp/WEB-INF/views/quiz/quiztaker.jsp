@@ -19,7 +19,8 @@
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <!-- Add external style sheet to align elements  -->
-    <link href="<c:url value='/static/css/main.css' />" rel="stylesheet"></link>
+    <link href="<c:url value='/static/css/main.css' />" rel="stylesheet"/>
+
 
 
 
@@ -38,6 +39,7 @@
         </ul>
     </div>
 </nav>
+
 <div class="container">
     <div class='header'>
         <div class='title'>QUIZ TAKER DASHBOARD</div>
@@ -71,6 +73,15 @@
                     <form:input path="id" readonly="true" size="8"   class="form-control" disabled="true" />
                 </div>
 
+                    <div class="form-group">
+
+
+                        <form:label path="date"  class="control-label" >
+                            <spring:message text="Date"/>
+                        </form:label>
+                       <form:input path="date" value ="<%=new java.util.Date().toString()%>" class="form-control"  required="required" readonly="true" />
+                    </div>
+
                 <c:forEach items="${listQuestions}" var="question">
 
                     <div id="questiondiv" style="display:none"><b>#${question.id} </b></div>
@@ -80,14 +91,13 @@
                     <div> <b>C. </b>${question.answer3} </div>
                     <div><b>D. </b> ${question.answer4}</div>
 
-                    <h4><span class="label label-default" style="background-color:red"><b>Correct Answer: </b></span>  <form:select id = "useranswer" name = "useranswer" path="useranswer" required="required">
+                    <div class="form-group"><h4><label><b>Your Answer: </b></label>  <select class="form-control" id = "useranswer" name = "useranswer" required="required">
                         <option value = "A">A</option>
                         <option value = "B">B</option>
                         <option value = "C">C</option>
                         <option value = "D">D</option>
-                    </form:select></h4>
-
-                    <hr style="color:black">
+                    </select></h4>
+            </div>
                 </c:forEach>
                     <input type="submit"
                            value="Submit" class="btn btn-primary btn-block" />
@@ -108,7 +118,24 @@
             </div>
 
         <div role="tabpanel" class="tab-pane" id="history">
+            <div class="panel panel-info" >
+                <div class="panel-heading" >
+                    <div class="panel-title" style="color:white">Quiz Taken History</div>
+                </div>
+                <div class="panel-body" >
+                    <c:if test="${!empty listQuizResults}">
 
+                        <c:forEach items="${listQuizResults}" var="quizresult">
+
+                            </p><div id="quizresultdiv" style="display:none">${quizresult.id}</div>
+                        <div id="quizresultdate" style="font-weight:bold; color:#3498DB">     <span>Quiz Taken Date: </span>  ${quizresult.date} </div>
+                           <div id="quizresultmark" style="font-weight:bold; color:#3498DB">   <span>Mark: </span> ${quizresult.mark} </div>
+                            <hr style="color:black">
+                        </c:forEach>
+
+                    </c:if>
+                </div>
+            </div>
 
 
 

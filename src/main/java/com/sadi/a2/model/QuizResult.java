@@ -1,6 +1,7 @@
 package com.sadi.a2.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name="quizresult")
@@ -10,8 +11,8 @@ public class QuizResult {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
 
-    @Column (name="useranswer")
-    private String useranswer;
+    @Column (name="date")
+    private String date;
     @Column (name="mark")
     private int mark;
 
@@ -30,14 +31,6 @@ public class QuizResult {
     }
 
 
-    public String getUseranswer() {
-        return useranswer;
-    }
-
-    public void setUseranswer(String useranswer) {
-        this.useranswer = useranswer;
-    }
-
     public int getMark() {
         return mark;
     }
@@ -46,11 +39,19 @@ public class QuizResult {
         this.mark = mark;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "QuizResult{" +
                 "id=" + id +
-                ", useranswer='" + useranswer + '\'' +
+                ", date='" + date + '\'' +
                 ", mark=" + mark +
                 '}';
     }

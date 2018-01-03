@@ -108,7 +108,7 @@
                     </div>
                     <div class="form-group">
 
-                       <h4><span class="label label-default" style="background-color:red"><b>Correct Answer: </b></span>  <form:select id = "correctanswer" name = "correctanswer" path="correctanswer" required="required">
+                       <h4><span class="label label-default" style="background-color:dodgerblue"><b>Correct Answer: </b></span>  <form:select id = "correctanswer" name = "correctanswer" path="correctanswer" required="required">
                             <option value = "A">A</option>
                             <option value = "B">B</option>
                             <option value = "C">C</option>

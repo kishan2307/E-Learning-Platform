@@ -31,7 +31,7 @@
     <div class='header'>
     </div>
     <div class="body">
-        <h3> HURRAY !! You just completed the quiz , please click the button below to go back and view your result in History section</h3>
+        <h3> HURRAY !! You just completed the quiz , please click the button below to go back and view your result in History section under Us</h3>
      <a href="/user">   <input
              class="btn btn-block btn-primary btn-default" value="Check Your Result"></a>
     </div>
